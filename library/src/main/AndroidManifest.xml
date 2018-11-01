@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.f1reking.base">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".base.BaseLibApplication"
+        >
+        <provider
+            android:name=".util.InitProvider"
+            android:authorities="${applicationId}.LLog"
+            android:exported="false"
+            android:multiprocess="true"/>
+    </application>
+</manifest>
